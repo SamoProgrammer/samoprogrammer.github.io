@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main-page.css">
+    <link rel="stylesheet" href='styles/main-page.css'>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <title>Mohammad Mohammadi</title>
 </head>
@@ -12,19 +12,23 @@
 <body>
     <header>
         <nav>
-            <div class="menu row">
+            <div class="menu row" id="menu">
                 <div class="col-md-2 menu-logo">
                     <img src="images/school.png" alt="menu-logo" width="50" height="50">
-                    <h5>School</h5>
+                    <h5 style="color: white;">School</h5>
                 </div>
                 <div class="col"></div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="row menu-navbar">
                         <ul class="list-group list-group-horizontal d-flex align-items-center justify-content-center">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="images.html">Pictures</a></li>
+                            <li><a href="#"><button class="btn btn-warning" id="changerButton"
+                                        onclick="changeMenuStyle()">Full Screen</button></a></li>
+                            <li><a href="#"><button class="btn btn-danger" id="themeChangerButton"
+                                        onclick="chnageMenuThemeColor()">Change Theme To red</button></a></li>
                         </ul>
                     </div>
                 </div>
@@ -38,9 +42,10 @@
             <h2>Welcome To</h2>
             <h3>Amirkabir Technical HighSchool</h3>
             <div class="splitter"></div>
+            <!-- <button class="btn btn-info" onclick="changeMenuToFullScreen()">Change Style</button> -->
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="row">
             <div class="col">
                 <h3>About</h3>
@@ -66,5 +71,6 @@
     </footer>
 </body>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/style-changer.js"></script>
 
 </html>
