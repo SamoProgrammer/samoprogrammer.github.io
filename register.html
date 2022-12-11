@@ -25,6 +25,7 @@
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="images.html">Pictures</a></li>
+                            <li><a href="register.html">Register</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,13 +60,21 @@
                 </div>
                 <br>
                 <div class="col">
+                    <h2>Age</h2>
+                </div>
+                <div class="col">
+                    <input type="number" name="age" min="3" max="120" id="txtAge" class="form-control"
+                        placeholder="please enter your age">
+                </div>
+                <br>
+                <div class="col">
                     <h2>Gender</h2>
                 </div>
                 <div class="col">
                     <div class="row">
                         <div class="col">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="chkGender">
+                                <input class="form-check-input" type="radio" name="gender" value="Male" id="chkGender">
                                 <label class="form-check-label" for="chkGenderMale">
                                     Male
                                 </label>
@@ -73,7 +82,8 @@
                         </div>
                         <div class="col">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="chkGender">
+                                <input class="form-check-input" type="radio" name="gender" value="Female"
+                                    id="chkGender">
                                 <label class="form-check-label" for="chkGenderFemale">
                                     Female
                                 </label>
@@ -81,15 +91,9 @@
                         </div>
                     </div>
                 </div>
-                <br>
-                <div class="col">
-                    <h2>Age</h2>
-                </div>
-                <div class="col">
-                    <input type="number" name="age" min="3" max="120" id="txtAge" class="form-control"
-                        placeholder="please enter your age">
-                </div>
 
+                <br>
+                <button class="btn btn-primary" onclick="reportMaker()">Submit</button>
             </div>
             <div class="col-6">
                 <div class="col">
@@ -108,6 +112,47 @@
                     <input type="range" class="form-range" min="0" max="100" step="1" id="skillJs">
                 </div>
             </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <table class="table table-success table-striped table-bordered">
+                    <thead>
+                        <th>key</th>
+                        <th>value</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full name</td>
+                            <td id="tdName"></td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td id="tdAge"></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td id="tdGender"></td>
+                        </tr>
+                        <tr>
+                            <td>Html</td>
+                            <td id="tdSkillHtml"></td>
+                        </tr>
+                        <tr>
+                            <td>Css</td>
+                            <td id="tdSkillCss"></td>
+                        </tr>
+                        <tr>
+                            <td>Java Script</td>
+                            <td id="tdSkillJs"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col"></div>
         </div>
     </div>
     <br>
@@ -128,14 +173,15 @@
             <div class="col">
                 <h3>Address</h3>
                 <hr>
-                <!-- <iframe
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.88165586442!2d59.50111695443861!3d36.3394179313153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6c8daedf3baa21%3A0xc0c125bb8edadd7f!2sAmirkabir%20technical%20high%20school!5e0!3m2!1sen!2suk!4v1666551446730!5m2!1sen!2suk"
                     width="230" height="200" style="border:0;" allowfullscreen="false" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </footer>
 </body>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/report-maker.js"></script>
 
 </html>
